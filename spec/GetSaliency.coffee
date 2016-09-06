@@ -91,7 +91,7 @@ describe 'GetSaliency component', ->
         chai.expect(regions[0].polygon[0].x).to.be.a 'number'
         chai.expect(regions[0].polygon[0].y).to.be.a 'number'
 
-        expected = [[60, 1], [511, 511]]
+        expected = [[61, 1], [511, 511]]
         chai.expect(bounding_rect).to.be.deep.equal expected
         chai.expect(polygon).to.be.an 'array'
         chai.expect(polygon.length).to.be.gt 0
@@ -99,9 +99,9 @@ describe 'GetSaliency component', ->
         expected = [285, 255]
         chai.expect(center).to.be.deep.equal expected
         expected =
-          x: 60
+          x: 61
           y: 1
-          width: 451
+          width: 450
           height: 510
         chai.expect(bbox).to.be.deep.equal expected
         chai.expect(confidence).to.be.lte 0.30
